@@ -1,6 +1,6 @@
 import React,{useMemo,useState} from "react";import{createRoot}from"react-dom/client";import{CheckCircle,Clock,MapPin,MessageCircle,Phone,Truck,ShieldCheck,Menu,X,ArrowRight,Search,Mail}from"lucide-react";import"./style.css";
 const DEFAULT_SERVICES=[["Dry Cleaning",80,"item"],["Shirt Ironing",15,"item"],["Pant Ironing",15,"item"],["Shirt Dry Cleaning",80,"item"],["Pant Dry Cleaning",80,"item"],["Saree Dry Cleaning",150,"item"],["Wash & Fold",60,"kg"],["Blanket Cleaning",250,"item"],["Express Service",50,"item"]];
-const wa=localStorage.getItem("freshpress_wa")||"919999999999";const phone=localStorage.getItem("freshpress_phone")||"919999999999";
+const wa=localStorage.getItem("freshpress_wa")||"919666022064";const phone=localStorage.getItem("freshpress_phone")||"9666022064";
 function App(){const[page,setPage]=useState("home"),[menu,setMenu]=useState(false),[cart,setCart]=useState({}),[order,setOrder]=useState(null),[track,setTrack]=useState(null);
 const services=JSON.parse(localStorage.getItem("freshpress_services")||"null")||DEFAULT_SERVICES;
 const total=useMemo(()=>Object.entries(cart).reduce((s,[i,q])=>s+services[i][1]*q,0),[cart,services]);
